@@ -1,0 +1,260 @@
+/* =========================
+   GOOGLE FONT
+========================= */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+/* =========================
+   ROOT VARIABLES
+========================= */
+:root {
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --primary: #6d28d9;
+  --primary-dark: #5b21b6;
+  --text: #111827;
+  --text-light: #6b7280;
+  --border: #e5e7eb;
+}
+
+/* =========================
+   RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--bg);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* =========================
+   CARD
+========================= */
+.card {
+  background: var(--card);
+  width: 1400px;
+  max-width: 100%;
+
+  display: flex;
+  align-items: center;
+  gap: 40px;
+
+  padding: 40px;
+
+  border-radius: 20px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================
+   LEFT SECTION
+========================= */
+.left {
+  flex: 1;
+  text-align: center;
+}
+
+.left img {
+  width: 300px;
+  height: 300px;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  border: 5px solid var(--primary);
+
+  transition: 0.3s;
+}
+
+.left img:hover {
+  transform: scale(1.03);
+}
+
+/* =========================
+   RIGHT SECTION
+========================= */
+.right {
+  flex: 2;
+}
+
+.right h1 {
+  font-size: 42px;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.role {
+  color: var(--primary);
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.bio {
+  color: var(--text-light);
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+/* =========================
+   SKILLS
+========================= */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.skills span {
+  background: #eef6f1;
+  color: var(--primary-dark);
+
+  padding: 8px 15px;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+
+  transition: 0.3s;
+
+  cursor: pointer;
+}
+
+.skills span:hover {
+  background: var(--primary);
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* =========================
+   SOCIAL LINKS
+========================= */
+.socials {
+  margin-bottom: 25px;
+}
+
+.socials a {
+  text-decoration: none;
+
+  background: var(--primary);
+  color: white;
+
+  padding: 10px 18px;
+
+  border-radius: 8px;
+
+  margin-right: 10px;
+
+  display: inline-block;
+
+  transition: 0.3s;
+}
+
+.socials a:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+/* =========================
+   STATS
+========================= */
+.stats {
+  display: flex;
+  gap: 15px;
+}
+
+.stat {
+  flex: 1;
+
+  background: #f9fafb;
+
+  border: 1px solid var(--border);
+
+  padding: 18px;
+
+  border-radius: 12px;
+
+  text-align: center;
+
+  transition: 0.3s;
+}
+
+.stat:hover {
+  transform: translateY(-4px);
+}
+
+.stat h3 {
+  color: var(--primary);
+  margin-bottom: 5px;
+  font-size: 24px;
+}
+
+.stat p {
+  color: var(--text-light);
+  font-size: 14px;
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+  }
+
+  .left img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .right h1 {
+    font-size: 32px;
+  }
+
+  .role {
+    font-size: 18px;
+  }
+
+  .skills {
+    justify-content: center;
+  }
+
+  .stats {
+    flex-direction: column;
+  }
+
+  .socials a {
+    margin: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 20px;
+  }
+
+  .right h1 {
+    font-size: 28px;
+  }
+
+  .bio {
+    font-size: 14px;
+  }
+
+  .left img {
+    width: 170px;
+    height: 170px;
+  }
+}
