@@ -2,6 +2,9 @@
 
 A responsive Digital Business Card built using HTML and CSS.
 
+##Card
+![Desktop Preview](My_card.png)
+
 ## Features
 
 - Responsive Design
